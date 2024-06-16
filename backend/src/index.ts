@@ -18,7 +18,7 @@ app.use(express.json());
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash"});
 
 async function run(a:string):Promise<string>{
-    const prompt = "Write a react code using tailwind shadcn ionicon for a  " + a + "only give me code snippet in jsx dont explain me anything"
+    const prompt = "Write a react code using shadcn tailwind ionicon for a  " + a + "only give me code snippet in react with correct syntax dont explain me anything"
   
     const result = await model.generateContent(prompt);
     const response = await result.response;
